@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% set title = 'register' %}
+{% set page_active = 'register' %}
+
+{% block _content %}
+
+<div class="mb-3">
+    <form action="" method="POST">
+ 
+     <label for="username" class="form-laber">Username</label>
+     <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" placeholder="Isikan username">
+ 
+     <label for="password" class="form-laber">Password</label>
+     <input type="text" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder="Isikan password">
+ 
+   
+     <label for="password_1" class="form-laber">Konfirmasi Password</label>
+     <input type="text" class="form-control" name="password_1" id="password_1" aria-describedby="emailHelp" placeholder="Isikan password_1">
+ 
+   
+ 
+     <button type="submit" class="btn btn-primary w-100">Register</button>
+     </form>
+ 
+ 
+ </div>
+
+{% endblock %}

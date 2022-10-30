@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% set title = 'Lihat Mahasiswa' %}
+{% set page_active = 'mahasiswa' %}
+
+{% block _content %}
+
+<div class="row mt-5">
+    <a href="/mahasiswa" class="btn btn-primary me-auto">Kembali</a>
+</div>
+<div class="mb-3">
+    <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+    <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap"
+        placeholder="Masukkan Nama Lengkap" value="{{ data.nama_lengkap}}" disabled >
+</div>
+<div class="mb-3">
+    <label for="nim" class="form-label">Nim</label>
+    <input type="text" class="form-control" id="nim" name="nim"
+        placeholder="Masukkan Nim Anda" value="{{ data.nim}}" disabled >
+</div>
+<div class="mb-3">
+    <label for="jurusan" class="form-label">Jurusan</label>
+    <input type="text" class="form-control" id="jurusan" name="jurusan"
+        placeholder="Masukkan jurusan Anda" value="{{ data.jurusan}}" disabled >
+</div>
+<div class="mb-3">
+    <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+    <input type="text" class="form-control" id="tanggal_lahir" name="tanggal_lahir"
+        placeholder="Masukkan tanggal_lahir Anda" value="{{ data.tanggal_lahir}}" disabled >
+</div>
+<div class="mb-3">
+    <label for="status" class="form-label">Status</label>
+    <input type="text" class="form-control" id="status" name="status"
+        placeholder="Masukkan status Anda" value="{{ data.status}}" disabled >
+</div>
+<div class="mb-3">
+    <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+    <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin"
+        placeholder="Masukkan jenis_kelamin Anda" value="{{ data.jenis_kelamin}}" disabled >
+</div>
+{% endblock %}

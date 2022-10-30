@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% set title = 'Edit Mahasiswa' %}
+{% set page_active = 'mahasiswa' %}
+
+{% block _content %}
+<div class="row mt-5">
+    <div class="col-12">
+        <h1>Edit Mahasiswa</h1>
+    </div>
+
+    <div class="col-12">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap"
+                    placeholder="Masukkan Nama Lengkap" required value="{{ data.nama_lengkap }}">
+            </div>
+            <div class="mb-3">
+                <label for="nim" class="form-label">Nim</label>
+                <input type="number" class="form-control" id="nim" name="nim" placeholder="Masukkan Nim Anda" required value="{{ data.nim }}">
+            </div>
+            <div class="mb-3">
+                <label for="jurusan" class="form-label">Jurusan</label>
+                <select class="form-select" aria-label="Default select example" name="jurusan">
+                    <option selected>Pilih Satu</option>
+                    <option value="manajemen" {% if data.manajemen == 'manajemen' %} selected {% endif %}>Manajemen</option>
+                    <option value="teknik_informatika" {% if data.teknik_informatika == 'teknik_informatika' %} selected {% endif %}>Teknik Informatika</option>
+                    <option value="komunikasi"{% if data.kumikasi == 'kumunikasi' %} selected {% endif %}>Komunikasi</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+                <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="yyyy-mm-dd"
+                    required value="{{ data.tanggal_lahir }}">
+            </div>
+            <div class="mb-3">
+                <label for="Status" class="form-label">Status</label>
+                <select class="form-select" aria-label="Default select example" name="status">
+                    <option selected>Pilih Satu</option>
+                    <option value="aktif"{% if data.status == 'aktif' %} selected {% endif %}>Aktif</option>
+                    <option value="tidak_aktif"{% if data.status == 'tidak_aktif' %} selected {% endif %}>Tidak Aktif</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label><br>
+                <input type="radio" id="pria" name="jenis_kelamin"  value="Laki-laki"{% if data.jenis_kelamin == 'pria' %} checked {% endif %}>
+                <label for="jenis_kelamin">Laki-laki</label>
+                <input type="radio" id="wanita" name="jenis_kelamin" value="perempuan"{% if data.jenis_kelamin == 'wanita' %} checked {% endif %}>
+                <label for="jenis_kelamin">Perempuan</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/mahasiswa" class="btn btn-danger">Kembali</a>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

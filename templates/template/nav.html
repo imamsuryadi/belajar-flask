@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Universita Alma Ata</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link {% if page_active == 'home' %} active {% endif %}" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link {% if page_active == 'dropdown-toggle' %} active {% endif %}" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Fakultas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Teknik</a></li>
+              <li><a class="dropdown-item" href="#">Sosial</a></li>
+              <li><a class="dropdown-item" href="#">Kesehatan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page_active == 'mahasiswa' %} active {% endif %}" href="/mahasiswa">mahasiswa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page_active == 'jurusan' %} active {% endif %}" href="/jurusan">Jurusan</a>
+          </li>
+          <li class="nav-item">
+            {% if 'user' in session %}
+            <a class="nav-link {% if page_active == 'login' %} active {% endif %}" href="/logout">Logout</a>
+            {% else %}
+            <a class="nav-link {% if page_active == 'login' %} active {% endif %}" href="/login">Login</a>
+            {% endif %}
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {% if page_active == 'register' %} active {% endif %}" href="/register">Register</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link {% if page_active == 'dropdown-toggle' %} active {% endif %}" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Perpustakaan
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

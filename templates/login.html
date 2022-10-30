@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% set title = 'login' %}
+{% set page_active = 'login' %}
+
+{% block _content %}
+
+
+<div class="mb-3" >
+    <form action="" method="POST">
+ 
+     <label for="username" class="form-laber">Username</label>
+     <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" placeholder="isikan username">
+ 
+     <label for="password" class="form-laber">Password</label>
+     <input type="text" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder="isikan password">
+ 
+   
+ 
+     <button type="submit" class="btn btn-primary">Login</button>
+     </form>
+</div>
+ 
+ 
+
+{% endblock %}
